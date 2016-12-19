@@ -46,7 +46,7 @@ public class AdminUIIntegrationTest extends AdminUIHttpIntegrationTest {
 
         List<URI> allRedirectLocations = getAllRedirectLocations("", headers);
 
-        URI crateAdminURI = new URI(String.format(Locale.ENGLISH, "http://%s:%d/_plugin/crate-admin/", address.getHostName(), address.getPort()));
+        URI crateAdminURI = new URI(String.format(Locale.ENGLISH, "http://%s:%d/admin/", address.getHostName(), address.getPort()));
         // allRedirectLocations should not be null
         assertThat(allRedirectLocations, notNullValue());
         // allRedirectLocations should contain the crateAdminUI URI
@@ -62,7 +62,7 @@ public class AdminUIIntegrationTest extends AdminUIHttpIntegrationTest {
 
         List<URI> allRedirectLocations = getAllRedirectLocations("admin", headers);
 
-        URI crateAdminURI = new URI(String.format(Locale.ENGLISH, "http://%s:%d/_plugin/crate-admin/", address.getHostName(), address.getPort()));
+        URI crateAdminURI = new URI(String.format(Locale.ENGLISH, "http://%s:%d/admin/", address.getHostName(), address.getPort()));
         // all redirect locations should not be null
         assertThat(allRedirectLocations, notNullValue());
         // all redirect locations should contain the crateAdminUI URI
